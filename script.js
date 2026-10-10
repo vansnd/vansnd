@@ -32,7 +32,6 @@ loadCounter();
 document.querySelectorAll('.download-mod').forEach(link => {
     link.addEventListener('click', async () => {
         const { error } = await supabaseClient.rpc('increment_downloads');
-
         if (error) {
             console.error('NE OK', error);
         } else {
