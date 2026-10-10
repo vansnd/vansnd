@@ -17,7 +17,7 @@
     </div>
     <div class="cards">
     <div class="card">
-        <img src="img/modslogo.jfif" alt="modslogo" >
+        <img src="modslogo.jfif" alt="modslogo" >
         <div class="card-content">
         <h2>Моды</h2>
         <p>Скачать моды</p>
@@ -25,7 +25,7 @@
     </div>
     </div>
     <div class="card">
-        <img src="img/modsnewslogo.jfif" alt="modsnewslogo" >
+        <img src="modsnewslogo.jfif" alt="modsnewslogo" >
         <div class="card-content">
         <h2>Новости модов</h2>
         <p>Читайте новости модов</p>
@@ -33,7 +33,7 @@
     </div>
     </div>
     <div class="card">
-        <img src="img/9295a746-d2fc-47e4-851f-addfcaa4ca4b.jfif" alt="newmods logo" >
+        <img src="9295a746-d2fc-47e4-851f-addfcaa4ca4b.jfif" alt="newmods logo" >
         <div class="card-content">
         <h2>Новые моды</h2>
         <p>Читайте о новых модах</p>
@@ -48,16 +48,16 @@
     <h1>3 мода</h1>
 </div>
 <div class="disclamer">
-    <h1>Скачиваний: <span id="totalDownloads">0</span></h1>
+    <h1>Скачиваний: <span id="totalDownloads">Загрузка...</span></h1>
 </div>
 <div class="disclamer">
-    <h1>1941 год основания</h1>
+    <h1>2025 год основания</h1>
 </div>
 <div class="disclamer">
-    <h1>Обновления - отсутствуют</h1>
+    <h1>Обновления - есть</h1>
 </div>
 <div class="disclamer">
-    <h1>Какие моды выйдут можно посмотреть на странице новостей</h1>
+    <h1>Какие моды выйдут можно посмотреть на странице новых модов</h1>
 </div>
 </main>
 <footer>
@@ -66,40 +66,6 @@
     <center>©Vansnd, 2026</center>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<script>
-    const SUPABASE_URL = "https://xzimpyqvgvtcbesgvpgu.supabase.co";
-    const SUPABASE_KEY = "sb_publishable_EP374gh7_0cAXQOL31VUBw_zrS-7VCQ";
-
-    const supabaseClient = window.supabase.createClient(
-        SUPABASE_URL,
-        SUPABASE_KEY
-    );
-
-    console.log("Supabase подключён!");
-
-</script>
-<script>
-async function loadCounter() {
-    const { data, error } = await supabaseClient
-        .from('site_stats')
-        .select('total_downloads')
-        .eq('id', 1)
-        .single();
-
-    if (error) {
-    console.error("Ошибка Supabase:", error);
-    alert("Ошибка загрузки счётчика: " + error.message);
-    return;
-}
-
-console.log("Данные Supabase:", data);
-
-    document.getElementById('totalDownloads').textContent =
-        data.total_downloads;
-}
-
-loadCounter();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
