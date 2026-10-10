@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+}
 
 .cards {
     display: flex;
@@ -57,14 +65,16 @@ h2 {
 }
 
 header {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    background-color: rgb(228, 228, 228);
+    margin: 0;
+    width: 100%;
 }
 header a {
     text-decoration: none;
     font-size: 50px;
     padding-bottom: 100px;
     color: rgb(6, 128, 128);
+    padding-left: 10px;
 }
 
 main {
@@ -80,17 +90,17 @@ footer a {
     border-radius: 8px;
     background: #007bff;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 footer {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
     background-color: rgb(139, 139, 139);
     padding-left: 5px;
 }
 
 footer h3, center {
-    color: white;   
+    color: white;
+    padding-left: 10px;   
 }
 
 body {
@@ -98,21 +108,19 @@ body {
 }
 
 .opisanie {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
     height: 100px;
     display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    justify-content: center;  
+    margin-bottom: 3px;
 }
 
 .disclamer {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
     height: 100px;
     display: flex;
     justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 
 .no {
